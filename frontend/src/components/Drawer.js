@@ -44,6 +44,9 @@ const Drawer = ({ open, onClose, children }) => {
           <ChevronLeftIcon />
         </IconButton>
       </div>
+      {/* <div>
+        SIGA-NOS
+      </div> */}
       <Divider />
       {children}
     </UIDrawer>

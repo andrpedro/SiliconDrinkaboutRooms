@@ -21,7 +21,7 @@ const NotificationCheckbox = ({ onChange, openMessageDialog, isDisabled }) => {
 
   if (!browserHasSupport()) {
     return (
-      <Tooltip title="This browser doesn't support notifications">
+      <Tooltip title="Esse navegador não tem suporte para notificações">
         <NotificationsOff />
       </Tooltip>
     );
@@ -29,15 +29,15 @@ const NotificationCheckbox = ({ onChange, openMessageDialog, isDisabled }) => {
 
   if (!isAllowed) {
     return (
-      <Tooltip title="Request notification permission">
+      <Tooltip title="Permissão de notificação">
         <IconButton
-          aria-label="Exit room"
+          aria-label="Sair"
           aria-controls="menu-appbar"
           onClick={() => {
             if (isNotificationBlocked()) {
               openMessageDialog(
-                "Notification blocked",
-                "You must unlock Matrix's notification option in your browser settings."
+                "Notificação bloqueada",
+                "Você precisa desbloquear as notificações nas opções do seu navegador."
               );
             } else {
               requestPermissionToNotify(hasPermission => {
@@ -56,7 +56,7 @@ const NotificationCheckbox = ({ onChange, openMessageDialog, isDisabled }) => {
   }
 
   return (
-    <Tooltip title={`${isDisabled ? "Enable" : "Disable"} notification`}>
+    <Tooltip title={`${isDisabled ? "Habilitar" : "Desabilitar"} notificação`}>
       <Checkbox
         icon={<Notifications />}
         checkedIcon={<NotificationsOff />}

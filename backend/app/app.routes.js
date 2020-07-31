@@ -18,9 +18,9 @@ const routes = {
   createRoomPath: "/new",
   removeRoomPath: "/remove",
   listRoomsPath: "/rooms",
-  officePath: id => `/morpheus/office/${id}`,
-  roomPath: id => `/morpheus/room/${id}`,
-  homePath: "/morpheus/",
+  officePath: id => `/chip_pip/office/${id}`,
+  roomPath: id => `/chip_pip/room/${id}`,
+  homePath: "/chip_pip/",
   loginStrategyPath: `/auth/${authStrategy}`,
   loginStrategyCallbackPath: `/auth/${authStrategy}/callback`
 };
@@ -44,13 +44,14 @@ router.get(
       temporary: true
     };
 
-    const found = req.app.locals.roomsDetail.find(
-      element => element.id == req.query.roomId
-    );
+    // Não faz sentido para o nosso proposito que volte para a sala
+    // const found = req.app.locals.roomsDetail.find(
+    //   element => element.id == req.query.roomId
+    // );
 
-    if (!found) {
-      req.app.locals.roomsDetail.splice(1, 0, newRoom);
-    }
+    // if (!found) {
+    req.app.locals.roomsDetail.splice(1, 0, newRoom);
+    // }
 
     res.redirect(routes.roomPath(req.query.roomId));
   }

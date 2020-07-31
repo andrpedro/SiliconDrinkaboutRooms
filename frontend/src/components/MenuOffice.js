@@ -68,7 +68,7 @@ const MenuOffice = ({
           <SearchIcon />
         </div>
         <InputBase
-          placeholder="Search…"
+          placeholder="Procurar…"
           classes={{
             root: classes.inputRoot,
             input: classes.inputInput
@@ -79,7 +79,7 @@ const MenuOffice = ({
           }}
         />
       </div>
-      <Tooltip title="Show only full room">
+      {/* <Tooltip title="Show only full room">
         <Checkbox
           icon={<SupervisedUserCircle />}
           checkedIcon={<SupervisedUserCircle />}
@@ -88,7 +88,7 @@ const MenuOffice = ({
             onChangeFilter("onlyFullRoom", event.target.checked);
           }}
         />
-      </Tooltip>
+      </Tooltip> */}
       <ThemeCheckbox onChange={onChangeTheme} />
       <NotificationCheckbox
         isDisabled={settings.notificationDisabled}

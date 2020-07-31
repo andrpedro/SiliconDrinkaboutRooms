@@ -21,7 +21,7 @@ const BaseMeetingSettings = ({
 }) => (
   <>
     <Grid item>
-      <Tooltip title={`${micEnabled ? "Disable" : "Enable"} MIC`}>
+      <Tooltip title={`${micEnabled ? "Desabilitar" : "Habilitar"} Microfone`}>
         <Checkbox
           icon={<MicOff fontSize="large" />}
           checkedIcon={<Mic fontSize="large" />}
@@ -31,7 +31,7 @@ const BaseMeetingSettings = ({
       </Tooltip>
     </Grid>
     <Grid item>
-      <Tooltip title={`${videoEnabled ? "Disable" : "Enable"} Video`}>
+      <Tooltip title={`${videoEnabled ? "Desabilitar" : "Habilitar"} Video`}>
         <Checkbox
           icon={<VideocamOff fontSize="large" />}
           checkedIcon={<Videocam fontSize="large" />}

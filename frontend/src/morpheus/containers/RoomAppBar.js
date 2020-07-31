@@ -29,7 +29,7 @@ const RoomAppBar = ({
       <MenuRoom
         onExitRoom={() => {
           emitLeftMeeting();
-          history.push("/morpheus");
+          history.push("/chip_pip");
         }}
         onShare={() => {
           setShareModalOpen(true);

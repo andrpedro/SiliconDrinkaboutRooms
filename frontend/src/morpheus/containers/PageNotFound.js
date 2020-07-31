@@ -20,16 +20,16 @@ const PageNotFound = () => {
   return (
     <div className={classes.root}>
       <Typography variant="h3" gutterBottom>
-        404 - Page not found
+        404 - Estamos perdidos igual a você
       </Typography>
       <Button
         component={AdapterLink}
-        to="/morpheus"
+        to="/chip_pip"
         variant="outlined"
         color="primary"
         size="large"
       >
-        Go to home page
+        Voltar a entrada
       </Button>
     </div>
   );

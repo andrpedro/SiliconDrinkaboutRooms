@@ -36,7 +36,7 @@ const OfficePage = ({
         emitEnterInRoom(findResult.id);
         onSetCurrentRoom(findResult);
       } else {
-        history.push("/morpheus/");
+        history.push("/chip_pip/");
       }
     }
   }, [match.params.roomId]);
@@ -51,7 +51,7 @@ const OfficePage = ({
             onEnterRoom={() => {
               emitEnterInRoom(room.id);
               onSetCurrentRoom(room);
-              history.replace(`/morpheus/office/${room.id}`);
+              history.replace(`/chip_pip/office/${room.id}`);
             }}
             onEnterMeeting={(event) => {
               emitEnterInRoom(room.id);
@@ -74,7 +74,7 @@ const OfficePage = ({
                 externalMeetRoomMonitoring();
 
               }else{
-                const redirectUrl = `/morpheus/room/${room.id}`;
+                const redirectUrl = `/chip_pip/room/${room.id}`;
                 if (event.ctrlKey) {
                   window.open(redirectUrl, "_blank");
                 } else {

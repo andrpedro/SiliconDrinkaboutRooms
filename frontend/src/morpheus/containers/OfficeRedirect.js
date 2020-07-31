@@ -19,7 +19,7 @@ const OfficeRedirect = ({ rooms, currentRoom }) => {
   }, [currentRoom, rooms]);
 
   if (roomId) {
-    return <Redirect to={`/morpheus/office/${roomId}`} />;
+    return <Redirect to={`/chip_pip/office/${roomId}`} />;
   }
 
   return <Loading />;

@@ -1,5 +1,5 @@
 {
-  "name": "matrix-backend",
+  "name": "silicon-roomsabout-backend",
   "scripts": {
     "build-backend": "babel ./app -d ./dist",
     "start": "nodemon --exec babel-node ./app/index.js",

@@ -26,7 +26,7 @@ export function buildAuthStrategy(
       const profile = googleProfileToMatrixProfile(googleProfile);
 
       if (!isAuthorized(profile)) {
-        return cb(new Error(`E-mail ${profile.email} is not authorized`));
+        return cb(new Error(`E-mail ${profile.email} não está autorizado`));
       }
 
       return cb(undefined, profile);

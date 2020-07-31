@@ -21,7 +21,7 @@ const AdvancedMeetingSettings = ({
   <Grid container spacing={3}>
     <Grid item xs={12} sm={6}>
       <Select
-        label="Resolution"
+        label="Resolução"
         options={videoQualityOptions}
         value={videoQualityValue}
         onChange={onVideoQualityChange}

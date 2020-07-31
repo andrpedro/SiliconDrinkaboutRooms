@@ -10,16 +10,16 @@ import PageNoFound from "./containers/PageNotFound";
 
 const routesEntity = [
   {
-    path: "/morpheus",
+    path: "/chip_pip",
     page: OfficeRedirect
   },
   {
-    path: "/morpheus/office/:roomId",
+    path: "/chip_pip/office/:roomId",
     page: OfficePage,
     appBar: OfficeAppBar
   },
   {
-    path: "/morpheus/room/:roomId",
+    path: "/chip_pip/room/:roomId",
     page: RoomPage,
     appBar: RoomAppBar
   }

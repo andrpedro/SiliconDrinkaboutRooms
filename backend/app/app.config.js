@@ -17,13 +17,13 @@ export function getEnvironment() {
 
 export function getSessionConfig() {
   const cookieSessionKey =
-    process.env.COOKIE_SESSION_SECRET || "matrix-session";
+    process.env.COOKIE_SESSION_SECRET || "silicon-roomsabout-session";
   const maxAge =
     environment.parseVariable(process.env.COOKIE_SESSION_MAX_AGE) ||
     30 * 24 * 60 * 60 * 1000; // 30 days
 
   return {
-    name: "matrix-session",
+    name: "silicon-roomsabout-session",
     keys: [cookieSessionKey],
     maxAge
   };

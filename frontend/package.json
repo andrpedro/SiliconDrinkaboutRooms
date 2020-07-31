@@ -1,5 +1,5 @@
 {
-  "name": "matrix-frontend",
+  "name": "silicon-roomsabout-frontend",
   "scripts": {
     "build-frontend": "webpack --mode production --config webpack.production.js",
     "test": "nyc --reporter=text mocha './test/**/*.test.js' --watch",

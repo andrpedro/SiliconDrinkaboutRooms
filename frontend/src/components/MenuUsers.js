@@ -36,9 +36,9 @@ const useStyles = makeStyles(theme => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: 120,
+      width: 166,
       "&:focus": {
-        width: 200
+        width: 195
       }
     }
   }
@@ -55,13 +55,13 @@ const MenuUsers = ({
   const commitSearch = debounce(onChangeFilter, 300);
 
   return (
-    <List subheader={<ListSubheader>Users Online</ListSubheader>}>
+    <List subheader={<ListSubheader>Drinkabouters Online</ListSubheader>}>
       <div className={classes.search}>
         <div className={classes.searchIcon}>
           <SearchIcon />
         </div>
         <InputBase
-          placeholder="Search users..."
+          placeholder="Procurar Drinkabouter..."
           classes={{
             root: classes.inputRoot,
             input: classes.inputInput

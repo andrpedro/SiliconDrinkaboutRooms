@@ -7,22 +7,42 @@ const roomFilePath = "../file/matrix.room.web.json";
 
 const createRoomFileSync = () => {
   const niceNames = [
-    "The Dock",
-    "Nebuchadnezzar",
-    "Logos",
-    "Osiris",
-    "Icarus",
-    "Caduceus",
-    "Brahma",
-    "Novalis",
-    "Vigilant",
-    "Zion",
+    "Silicon Drinkabout",
+    "Seville",
+    "London",
+    "Toronto",
+    "São Paulo",
+    "Guildford",
+    "Sofia",
+    "Rome",
+    "Manchester",
+    "Kiev",
+    "Recife",
+    "Porto",
+    "Kharkiv",
+    "Belfast",
+    "Cambridge",
+    "Milan",
+    "Stockholm",
+    "Rio Verde",
+    "Odesa",
+    "Oxford",
+    "Tallinn",
+    "Bristol",
+    "Leeds",
+    "Turin",
+    "Poltava",
+    "Lisbon",
+    "Ruse",
+    "Cluj Napoca",
+    "Londrina",
   ];
 
 
   const roomsData = niceNames.map((name) => ({
     id: uuid(),
     name,
+    disableRoom:true
   }));
 
   // disable meeting for The Dock

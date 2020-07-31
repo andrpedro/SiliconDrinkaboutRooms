@@ -77,6 +77,8 @@ export const emitStartMeeting = () => {
 
 export const emitLeftMeeting = () => {
   events.leftMeet();
+  events.enterInRoom(defaultRoomId);
+  saveCurrentUserRoom(defaultRoomId);
 };
 
 export const emitInviteUser = userId => {
@@ -89,6 +91,10 @@ export const signOut = () => {
 
   axios.post("/auth/logout")
     .then(() => {
+
+      events.enterInRoom(defaultRoomId);
+      saveCurrentUserRoom(defaultRoomId);
+      
       profile.terminate();
       window.location.href = "./";
     })

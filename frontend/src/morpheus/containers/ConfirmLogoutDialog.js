@@ -8,8 +8,8 @@ import { signOut } from "../socket";
 
 const ConfirmLogoutDialog = ({ onClose, isOpen }) => (
   <ConfirmDialog
-    title="Logout"
-    message="Do you really want to unplug from the matrix?"
+    title="Encerrar"
+    message="Estamos feliz que tenha participado, está de saída?"
     open={isOpen}
     onClose={onClose}
     onConfirm={signOut}

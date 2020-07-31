@@ -50,7 +50,7 @@ const RoomPage = ({
           emitEnterInRoom(findResult.id);
           onSetCurrentRoom(findResult);
         } else {
-          history.push("/morpheus");
+          history.push("/chip_pip");
         }
       } else {
         setLoading(false);
@@ -70,8 +70,13 @@ const RoomPage = ({
 
     api.addEventListener("videoConferenceLeft", () => {
       emitLeftMeeting();
-      history.push("/morpheus/");
+      history.push("/chip_pip/");
     });
+  };
+
+  const cancelMeeting = () => {
+    history.push("/chip_pip/");
+    emitLeftMeeting();
   };
 
   if (isLoading) {
@@ -86,7 +91,7 @@ const RoomPage = ({
         open={isMeetingDialogOpen}
         onClose={() => {
           setMeetingDialogOpen(false);
-          history.push("/morpheus/");
+          cancelMeeting();
         }}
         onConfirm={() => {
           setMeetingDialogOpen(false);
@@ -113,7 +118,7 @@ RoomPage.propTypes = {
 };
 
 RoomPage.defaultProps = {
-  onSetCurrentRoom: () => {},
+  onSetCurrentRoom: () => { },
   rooms: [],
   currentRoom: {},
   meetingSettings: {}
